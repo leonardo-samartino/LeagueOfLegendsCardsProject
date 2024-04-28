@@ -132,6 +132,7 @@ section {
     font-weight: bold;
     margin-top: 300px;
     padding-left: 30px;
+    text-shadow: 2px 2px #1E2328;
     
     
     
@@ -167,10 +168,16 @@ section {
 
 /* Estilos para o título do campeão */
 .title_box {
+    padding-left: 30px;
+    padding: 8px;
+    text-transform: capitalize;
+    backdrop-filter: blur(8px);
+    
+    font-size: 12px;
     font-style: italic;
     color: #ffffff;
     margin-bottom: 5px;
-    margin-left: 30px;
+    
     
 }
 
@@ -195,6 +202,8 @@ section {
     
 }
 .popupContent{
+        z-index: 0;
+    
     
     color: #f5f5f5;
     margin: 15% auto;
@@ -203,4 +212,8 @@ section {
     /* padding: 20px; */
     /* border: 1px solid red; */
     width: fit-content;
+}
+.popupContent img{
+    border-radius: 15px;
+    
 }
