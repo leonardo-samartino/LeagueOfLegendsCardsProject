@@ -78,7 +78,7 @@ function displayModal(champion) {
     // Preencher o conteúdo do modal com os detalhes do campeão
     modalContent.innerHTML = `
         
-        <img style= width: fit-content src="https://cdn.communitydragon.org/14.8.1/champion/${champion.id}/splash-art" alt="${champion.name}" >
+        <img src="https://cdn.communitydragon.org/14.8.1/champion/${champion.id}/splash-art" alt="${champion.name}" >
         <h2>${champion.name}</h2>
         <h3>${champion.title}</h3>
         <p>${champion.blurb}</p>
