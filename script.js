@@ -1,8 +1,21 @@
+let champList = [];
+
+//Search bar
+const search = document.getElementById("search")
+search.addEventListener('keyup', (e) => {
+    const searchString = e.target.value
+    const filteredChampions = champList.filter((champion) => {
+        return champion.name.includes(searchString)
+    })
+    console.log(filteredChampions)
+})
+
+
 // Função para consumir os dados da API 
 const getChampionData = async function () {
     let champData = `https://ddragon.leagueoflegends.com/cdn/14.8.1/data/pt_BR/champion.json`
     const response = await fetch(champData)
-    const champList = await response.json()
+    champList = await response.json()
     return champList.data
 }
 

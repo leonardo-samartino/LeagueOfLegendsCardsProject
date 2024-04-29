@@ -173,6 +173,27 @@ section {
     transition: ease-in 0.2s;
 }
 
+/* Estilos para a imagem do campeão */
+.art_box {
+    /* border: 1px solid blue; */
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    z-index: -1;
+    clip-path: fill-box;
+    border-radius: 6px;
+
+}
+
+.art_box img {
+    transform: translateX(-10%);
+    width: 380px;
+    height: 400px;
+    /* background: cover no-repeat center; */
+    transition: ease-in 0.2s;
+}
+
+
 /* Estilos para a descrição/lore do campeão */
 .lore_box {
     font-size: 14px;
