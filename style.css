@@ -55,12 +55,11 @@ header h1 {
     text-transform: uppercase;
     letter-spacing: 0.3rem;
 }
-
+/* Estilo da search bar */
 .searchBar {
     background-color: #f5f5f5;
     display: flex;
     align-items: center;
-    /* padding: 8px 10px; */
     border-radius: 4px;
     height: 40px;
 }
@@ -89,99 +88,89 @@ header h1 {
 .searchInput::placeholder {
     color: rgba(0, 0, 0, .5);
 }
-
+/* Section principal do site */
 section {
     margin-top: 100px;
 }
-
+/* Div que recebe os cards */
 .cardsContainer {
-    column-gap: 40px;
-    row-gap: 40px;
-    padding: 0px 100px; 
-    
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
     width: 100%;
     height: 1000px;
+    display: flex;
+    column-gap: 40px;
+    row-gap: 40px;
+    padding: 0px 100px;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
-/* Estilos para o container do card */
+/* Estilos para o corpo do card */
 .card_box {
+    width: 300px;
+    height: 400px;
+    border-radius: 6px;    
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    background-color: transparent;
-    /* border: 1px solid #ccc; */
-    border-radius: 10px;
-    /* padding: 10px; */
-    margin-bottom: 20px;
-    width: 300px;
-    
-    /* Ajuste conforme necessário */
-    height: 400px;
+    justify-content: end;
+    background-color: transparent;    
     z-index: 0;
-    box-shadow: 2px 2px 10px 2px black  ;
+    box-shadow: rgba(0, 0, 0, 0.6) 5px 5px 20px;
+    transition: all .2s;
+}
 
-
-    
+.card_box:hover {
+    transform: translateY(-2em);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* Container dos textos do card */
+.name_titleBox {
+    border-radius: 0px 0px 6px 6px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, .40);
+    height: 80px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
 }
 
 /* Estilos para o nome do campeão */
 .name_box {
-    
     color: white;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 300px;
-    padding-left: 30px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-left: 15px;
     text-shadow: 2px 2px #1E2328;
-    background-color: #1e2328af;
-    
-    
-}
-
-
-/* Estilos para a imagem do campeão */
-.art_box{
-    /* border: 1px solid blue; */
-    
-    width: 300px;
-    height: 400px;
-    position: absolute;
-    z-index: -1;
-    clip-path:fill-box;
-    border-radius: 10px;
-    
-}
-.art_box img{
-    
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;   
-    
-    transform: translateX(-40%);
-    width: 545px;
-    height: 400px; 
-    
-    
-    
 }
 
 /* Estilos para o título do campeão */
 .title_box {
-    padding-left: 30px;
-    padding: 8px;
+    padding: 8px 8px 8px 15px;
     text-transform: capitalize;
-    background-color: #1e2328af;
-    /* backdrop-filter: blur(8px); */
-    
-    font-size: 12px;
+    font-size: 1.5rem;
     font-style: italic;
     color: #ffffff;
     margin-bottom: 5px;
-    
-    
+}
+
+/* Estilos para a imagem do campeão */
+.art_box {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    z-index: -1;
+    clip-path: fill-box;
+    border-radius: 6px;
+}
+
+.art_box img {
+    transform: translateX(-10%);
+    width: 380px;
+    height: 400px;
+    /* background: cover no-repeat center; */
+    transition: ease-in 0.2s;
 }
 
 /* Estilos para a descrição/lore do campeão */
@@ -189,10 +178,10 @@ section {
     font-size: 14px;
     line-height: 1.5;
 }
+/*Estilos do card PopUp*/
 
-/*card PopUp*/
-
-.cardPopup{
+/* Container do popup */
+.cardPopup {
     display: none;
     position: fixed;
     z-index: 1;
@@ -200,23 +189,63 @@ section {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    
-    
+    transform: translateY(-20%);
 }
-.popupContent{
-        z-index: 0;
-    
-    
+/*Conteúdo do popup*/
+
+.popupContent {
+    z-index: 0;
     color: #f5f5f5;
     margin: 15% auto;
-    
-    background-color: black;
-    /* padding: 20px; */
-    /* border: 1px solid red; */
+    background: transparent;
     width: fit-content;
+    border-radius: 6px;
 }
-.popupContent img{
-    border-radius: 15px;
-    
+
+.popupContent img {
+    border-radius: 10px;
+    position: absolute;
+    z-index: -1;
+    width: 1000px;
+    height: 590px;
+}
+
+.popupText {
+    width: 1000px;
+    height: 590px;
+    padding: 20px 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: end;
+    background-color: rgba(0, 0, 0, 0.25);
+    text-shadow: 2px 2px black;
+    border-radius: 10px;
+}
+
+.popupText h2 {
+    font-size: 5rem;
+}
+
+.popupText h3 {
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 0.2rem;
+}
+
+.popupText p {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.popupText h4 {
+    font-size: 2rem;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.popupText span {
+    font-size: 2rem;
+    font-weight: 500;
 }
