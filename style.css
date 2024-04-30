@@ -191,7 +191,7 @@ section {
     top: 0;
     width: 100%;
     height: 100%;
-    transform: translateY(3%);
+    transform: translateY(-20%);
 }
 /*Conteúdo do popup*/
 .popupContent {
