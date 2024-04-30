@@ -103,6 +103,8 @@ section {
     padding: 0px 100px;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    filter: blur(0px);
+    transition: 0.5s;
 }
 
 /* Estilos para o corpo do card */
