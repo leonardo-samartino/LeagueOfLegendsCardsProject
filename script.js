@@ -78,6 +78,8 @@ const CreateCards = async function (champListJSON, searchTerm = '') {
 async function  displayModal(champion) {
     var popup = document.getElementById("popup");
     var modalContent = document.getElementById("popupContent");
+    var background = document.getElementById("divCard");
+    
 
     // Preencher o conteúdo do pop-up com os detalhes do campeão
     modalContent.innerHTML = `
@@ -94,6 +96,7 @@ async function  displayModal(champion) {
 
     // Exibir o pop-up
     popup.style.display = "block";
+    background.style.filter  = "blur(4px)"
 
     // Fetch em outra url para trazer a lore completa do campeão
     const loreUrl = `https://ddragon.leagueoflegends.com/cdn/14.8.1/data/pt_BR/champion/${champion.id}.json`;
@@ -107,8 +110,10 @@ async function  displayModal(champion) {
 // Função para fechar o pop-up quando o usuário clicar fora dele
 window.onclick = function (event) {
     var popup = document.getElementById("popup");
+    var background = document.getElementById("divCard")
     if (event.target == popup) {
         popup.style.display = "none";
+        background.style.filter  = "blur(0px)"
     }
 }
 
