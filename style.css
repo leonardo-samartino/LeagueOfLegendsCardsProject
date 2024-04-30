@@ -232,7 +232,7 @@ section {
     letter-spacing: 0.2rem;
 }
 /* Lore */
-.popupText p {''
+.popupText p {
     font-size: 2rem;
     margin-bottom: 20px;
 }
