@@ -169,30 +169,8 @@ section {
     transform: translateX(-10%);
     width: 380px;
     height: 400px;
-    /* background: cover no-repeat center; */
     transition: ease-in 0.2s;
 }
-
-/* Estilos para a imagem do campeão */
-.art_box {
-    /* border: 1px solid blue; */
-    width: 300px;
-    height: 400px;
-    position: absolute;
-    z-index: -1;
-    clip-path: fill-box;
-    border-radius: 6px;
-
-}
-
-.art_box img {
-    transform: translateX(-10%);
-    width: 380px;
-    height: 400px;
-    /* background: cover no-repeat center; */
-    transition: ease-in 0.2s;
-}
-
 
 /* Estilos para a descrição/lore do campeão */
 .lore_box {
@@ -213,7 +191,6 @@ section {
     transform: translateY(-20%);
 }
 /*Conteúdo do popup*/
-
 .popupContent {
     z-index: 0;
     color: #f5f5f5;
@@ -222,7 +199,7 @@ section {
     width: fit-content;
     border-radius: 6px;
 }
-
+/* Splash-art */
 .popupContent img {
     border-radius: 10px;
     position: absolute;
@@ -230,7 +207,7 @@ section {
     width: 1000px;
     height: 590px;
 }
-
+/* Caixa de texto */
 .popupText {
     width: 1000px;
     height: 590px;
@@ -242,11 +219,11 @@ section {
     text-shadow: 2px 2px black;
     border-radius: 10px;
 }
-
+/* Nome do Campeão */
 .popupText h2 {
     font-size: 5rem;
 }
-
+/* Título */
 .popupText h3 {
     font-size: 3.5rem;
     font-style: italic;
@@ -254,18 +231,18 @@ section {
     margin-bottom: 20px;
     letter-spacing: 0.2rem;
 }
-
-.popupText p {
+/* Lore */
+.popupText p {''
     font-size: 2rem;
     margin-bottom: 20px;
 }
-
+/* Tags */
 .popupText h4 {
     font-size: 2rem;
     margin-bottom: 6px;
     font-weight: 500;
 }
-
+/* Dificuldade */
 .popupText span {
     font-size: 2rem;
     font-weight: 500;
