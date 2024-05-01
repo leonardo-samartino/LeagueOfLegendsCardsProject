@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-
+/* Estilização global */
 * {
     margin: 0;
     padding: 0;
@@ -20,13 +20,17 @@ body {
     background-attachment: fixed;
 }
 
+/* Estilização dos elementos específicos */
+
+/* Cabeçalho */
 nav {
     background-color: #1E2328;
     height: 60px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    width: 100%;
     padding: 0px 20px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
 }
 
 nav a {
@@ -36,14 +40,30 @@ nav a {
     font-weight: 600;
 }
 
+nav ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 nav ul li {
     list-style: none;
     padding: 0;
 }
 
+.logo {
+    flex: 15%;
+}
+
+.navSearchBar {
+    display: flex;
+    justify-content: center;
+    flex: 85%;
+}
+
 header {
     height: 150px;
-    margin: 65px 0px;
+    /* margin: 65px 0px; */
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -55,26 +75,18 @@ header h1 {
     font-size: 3.5rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
+    margin-top: 130px;
 }
+
 /* Estilo da search bar */
 .searchBar {
     background-color: #f5f5f5;
     display: flex;
     align-items: center;
-    border-radius: 4px;
+    border-radius: 50px;
     height: 40px;
-}
-
-.searchBtn {
-    border: none;
-    background-color: #1E2328;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 4px 0px 0px 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0 20px;
+    transform: translateX(-147px);
 }
 
 .searchInput {
@@ -83,16 +95,18 @@ header h1 {
     outline: none;
     border: none;
     background: transparent;
-    width: 400px;
+    width: 350px;
 }
 
 .searchInput::placeholder {
-    color: rgba(0, 0, 0, .5);
+    color: #00000080;   
 }
+
 /* Section principal do site */
 section {
     margin-top: 100px;
 }
+
 /* Div que recebe os cards */
 .cardsContainer {
     width: 100%;
@@ -103,7 +117,7 @@ section {
     padding: 0px 100px;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    filter: blur(0px);
+    filter: brightness(100%), blur(0px);
     transition: 0.5s;
 }
 
@@ -111,12 +125,12 @@ section {
 .card_box {
     width: 300px;
     height: 400px;
-    border-radius: 6px;    
+    border-radius: 6px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: end;
-    background-color: transparent;    
+    background-color: transparent;
     z-index: 0;
     box-shadow: rgba(0, 0, 0, 0.6) 5px 5px 20px;
     transition: all .2s;
@@ -127,6 +141,9 @@ section {
     transform: scale(1.1);
     cursor: pointer;
 }
+
+
+
 /* Container dos textos do card */
 .name_titleBox {
     border-radius: 0px 0px 6px 6px;
@@ -180,6 +197,7 @@ section {
     font-size: 14px;
     line-height: 1.5;
 }
+
 /*Estilos do card PopUp*/
 
 /* Container do popup */
@@ -193,6 +211,7 @@ section {
     height: 100%;
     transform: translateY(-20%);
 }
+
 /*Conteúdo do popup*/
 .popupContent {
     z-index: 0;
@@ -202,6 +221,7 @@ section {
     width: fit-content;
     border-radius: 6px;
 }
+
 /* Splash-art */
 .popupContent img {
     border-radius: 10px;
@@ -210,6 +230,7 @@ section {
     width: 1000px;
     height: 590px;
 }
+
 /* Caixa de texto */
 .popupText {
     width: 1000px;
@@ -222,10 +243,12 @@ section {
     text-shadow: 2px 2px black;
     border-radius: 10px;
 }
+
 /* Nome do Campeão */
 .popupText h2 {
     font-size: 5rem;
 }
+
 /* Título */
 .popupText h3 {
     font-size: 3.5rem;
@@ -234,17 +257,20 @@ section {
     margin-bottom: 20px;
     letter-spacing: 0.2rem;
 }
+
 /* Lore */
 .popupText p {
     font-size: 2rem;
     margin-bottom: 20px;
 }
+
 /* Tags */
 .popupText h4 {
     font-size: 2rem;
     margin-bottom: 6px;
     font-weight: 500;
 }
+
 /* Dificuldade */
 .popupText span {
     font-size: 2rem;
