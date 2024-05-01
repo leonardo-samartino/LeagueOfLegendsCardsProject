@@ -96,7 +96,8 @@ async function  displayModal(champion) {
 
     // Exibir o pop-up
     popup.style.display = "block";
-    background.style.filter  = "blur(4px)"
+    // Adciona um filtro nos cards ao fundo
+    background.style.filter  = "brightness(40%) blur(4px)"
 
     // Fetch em outra url para trazer a lore completa do campeão
     const loreUrl = `https://ddragon.leagueoflegends.com/cdn/14.8.1/data/pt_BR/champion/${champion.id}.json`;
@@ -113,7 +114,9 @@ window.onclick = function (event) {
     var background = document.getElementById("divCard")
     if (event.target == popup) {
         popup.style.display = "none";
-        background.style.filter  = "blur(0px)"
+        
+        //remove o filtro dos cards
+        background.style.filter  = "brightness(100%) blur(0px)"
     }
 }
 
