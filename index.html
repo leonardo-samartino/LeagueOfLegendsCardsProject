@@ -4,34 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer type="module"></script>
     <title>Cards of Legends</title>
-    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
 </head>
-
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">Cards of Legends</a></li>
+            <li class="logo"><a href="index.html">Cards of Legends</a></li>
+            <li class="navSearchBar">
+                <form class="searchBar" action="">                    
+                    <img src="icons/search.svg" alt="search icon">                    
+                    <input id="search" class="searchInput" type="search" placeholder="Procurar por nome...">
+                </form>
+            </li>
         </ul>
     </nav>
     <header>
         <h1>Campeões</h1>
-        <form class="searchBar" action="">
-            <button class="searchBtn">
-                <img src="icons/search.svg" alt="search icon">
-            </button>
-            <input id="search" class="searchInput" type="search" placeholder="Procurar por nome...">
-        </form>
     </header>
     <section>
-
         <div class="cardsContainer" id="divCard">
         </div>
         <div class="cardPopup" id="popup">
             <div class="popupContent" id="popupContent">
-
             </div>
         </div>
     </section>
