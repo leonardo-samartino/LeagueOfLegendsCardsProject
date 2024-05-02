@@ -52,7 +52,7 @@ const CreateCards = async function (champListJSON, searchTerm = '') {
         nameBox.setAttribute('class', 'name_box')
         splashArtBox.setAttribute('class', 'art_box')
         titleBox.setAttribute('class', 'title_box')
-        splashArt.setAttribute('src', `https://cdn.communitydragon.org/14.8.1/champion/${champion.id}/tile`)
+        splashArt.setAttribute('src', `https://cdn.communitydragon.org/14.9.1/champion/${champion.id}/tile`)
         nameTitleBox.setAttribute('class', 'name_titleBox')
 
 
@@ -84,7 +84,7 @@ async function  displayModal(champion) {
     // Preencher o conteúdo do pop-up com os detalhes do campeão
     modalContent.innerHTML = `
         
-        <img src="https://cdn.communitydragon.org/14.8.1/champion/${champion.id}/splash-art" alt="${champion.name}" >
+        <img src="https://cdn.communitydragon.org/14.9.1/champion/${champion.id}/splash-art" alt="${champion.name}" >
         <div class="popupText">
         <h2>${champion.name}</h2>
         <h3>${champion.title}</h3>
@@ -100,7 +100,7 @@ async function  displayModal(champion) {
     background.style.filter  = "brightness(40%) blur(4px)"
 
     // Fetch em outra url para trazer a lore completa do campeão
-    const loreUrl = `https://ddragon.leagueoflegends.com/cdn/14.8.1/data/pt_BR/champion/${champion.id}.json`;
+    const loreUrl = `https://ddragon.leagueoflegends.com/cdn/14.9.1/data/pt_BR/champion/${champion.id}.json`;
     
         const response = await fetch(loreUrl);
         const data = await response.json();
