@@ -13,7 +13,7 @@ search.addEventListener('keyup', (e) => {
 
 // Função para consumir os dados da API 
 const getChampionData = async function () {
-    let champData = `https://ddragon.leagueoflegends.com/cdn/14.8.1/data/pt_BR/champion.json`
+    let champData = `https://ddragon.leagueoflegends.com/cdn/14.9.1/data/pt_BR/champion.json`
     const response = await fetch(champData)
     champList = await response.json()
     return champList.data
